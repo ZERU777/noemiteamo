@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Acceso</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       background: white;
@@ -10,21 +12,48 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      font-family: Arial;
+      font-family: Arial, sans-serif;
+    }
+
+    .contenedor {
+      text-align: center;
+    }
+
+    .titulo {
+      font-size: 36px;      /* MUY grande */
+      font-weight: 900;     /* bien gruesa */
+      margin-bottom: 30px;
+    }
+
+    input {
+      font-size: 22px;
+      padding: 12px;
+      width: 220px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    button {
+      font-size: 22px;
+      padding: 12px 30px;
+      cursor: pointer;
     }
   </style>
 </head>
+
 <body>
 
-  <div>
-    <p>Ingresa el código secreto</p>
-    <input type="password" id="codigo">
+  <div class="contenedor">
+    <div class="titulo">Ingresa el código secreto</div>
+
+    <input type="password" id="codigo" placeholder="Código">
+    <br>
     <button onclick="verificar()">Entrar</button>
   </div>
 
   <script>
     function verificar() {
-      const codigoCorrecto = "777"; // cambia esto
+      const codigoCorrecto = "777";
       const codigo = document.getElementById("codigo").value;
 
       if (codigo === codigoCorrecto) {
