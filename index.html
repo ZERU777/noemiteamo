@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Acceso</title>
+  <style>
+    body {
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <p>Ingresa el código secreto</p>
+    <input type="password" id="codigo">
+    <button onclick="verificar()">Entrar</button>
+  </div>
+
+  <script>
+    function verificar() {
+      const codigoCorrecto = "1234"; // cambia esto
+      const codigo = document.getElementById("codigo").value;
+
+      if (codigo === codigoCorrecto) {
+        window.location.href = "secreto.html";
+      } else {
+        alert("Código incorrecto");
+      }
+    }
+  </script>
+
+</body>
+</html>
